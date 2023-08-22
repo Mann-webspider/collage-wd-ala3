@@ -1,92 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <section>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-    <div class="navbar">
-      <div class="logo">
-        <img src="./images/logo.svg" alt="">
-        <div class="menu">
-          <ul>
-            <li>Collections</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-      </div>
-      </div>
-      
-    <div class="btn">
-      <div class="cart-div">
-        <img src="./images/icon-cart.svg" class="cart" alt="icon-cart">
-      </div>
-      <img src="./images/image-avatar.png" id="avatar" alt="avatar">
-    </div>
-  </div>
-  <hr class="hr-line">
-  <div class="hero">
-    <div class="left">
-      <div class="images">
-        <div class="show">
-          <img src="./images/image-product-1.jpg" alt="">
-          <div class="product-thumb">
-            <img src="./images/image-product-1-thumbnail.jpg" alt="">
-            <img src="./images/image-product-2-thumbnail.jpg" alt="">
-            <img src="./images/image-product-3-thumbnail.jpg" alt="">
-            <img src="./images/image-product-4-thumbnail.jpg" alt="">
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="navbar">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="" />
+          <div class="menu">
+            <ul>
+              <li>Collections</li>
+              <li>Men</li>
+              <li>Women</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
           </div>
         </div>
-        
-      </div>
-    </div>
-    <div class="right">
-      <div class="item-info">
-        <h5>Sneaker Company</h5>
-        <h2>Fall Limited Edition Sneakers</h2>
-        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
-          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-        </div>
-      <div class="item-price">
-        <div>
-          <h2>$125.00</h2>
 
-          <span id="discount">50%</span>
+        <div class="btn">
+          <div class="cart-div">
+            <!-- <img src="./images/icon-cart.svg" class="cart" alt="icon-cart"> -->
+            <input type="checkbox" name="check" id="check"  />
+            <div class="checkout">
+              <p>cart</p>
+              <hr>
+              <div id="checkout-items-empty" class="checkout-items-empty">
+                <p>Your cart is Empty</p>
+              </div>
+              <div id="checkout-items" class="hidden">
+                <div class="list">
+                  <div class="checkout-img">
+                    <img src="./images/image-product-1-thumbnail.jpg" alt="">
+                  </div>
+                  <div class="details">
+                    <p id="checkout-name"> Fall Limited Edition Sneakers</p>
+                    <p id="checkout-bill">$125.00 x 3 <span>$375.00</span></p> 
+                  </div>
+                  <div id="delete-cart">
+                    <img src="./images/icon-delete.svg" alt="">
+                  </div>
+                </div>
+                <div class="checkout-btn">
+                  <button class="add-cart">Checkout</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="./images/image-avatar.png" id="avatar" alt="avatar" />
         </div>
-        <p>$250.00</p>
       </div>
-      <div class="item-buy">
-        <div class="range">
-          <button id="minus"><img src="./images/icon-minus.svg" alt=""></button>
-          <p id="product-range">0</p>
-          <button id="plus"><img src="./images/icon-plus.svg" alt=""></button>
+      <hr class="hr-line" />
+      <div class="hero">
+        <div class="left">
+          <div class="images">
+            <div class="show">
+              <img src="./images/image-product-1.jpg" id="bigImg" alt="" />
+              <div class="product-thumb">
+                <button>
+                  <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+                </button>
+                <button>
+                  <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+                </button>
+                <button>
+                  <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+                </button>
+                <button>
+                  <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <button id="add-cart"><img src="./images/icon-cart.svg" alt=""> Add to cart</button>
+        <div class="right">
+          <div class="item-info">
+            <h5>Sneaker Company</h5>
+            <h2>Fall Limited Edition Sneakers</h2>
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+          </div>
+          <div class="item-price">
+            <div>
+              <h2>$125.00</h2>
+
+              <span id="discount">50%</span>
+            </div>
+            <p>$250.00</p>
+          </div>
+          <div class="item-buy">
+            <div class="range">
+              <button id="minusbtn">
+                <img src="./images/icon-minus.svg" alt="" />
+              </button>
+              <p id="product-range">1</p>
+              <button id="plus">
+                <img src="./images/icon-plus.svg" alt="" />
+              </button>
+            </div>
+            <button class="add-cart" id="add-cart">
+              <img src="./images/icon-cart.svg" alt="" /> Add to cart
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  
-  
-  <div class="attribution">
-    Coded by <a href="#">Mann Dalsaniya</a>.
-  </div>
-</section>
-</body>
+
+      <div class="attribution">Coded by <a href="#">Mann Dalsaniya</a>.</div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
 </html>
